@@ -151,10 +151,11 @@ section {
 }
 
 #projects article {
-    background-color: gray;
-    padding: 50px;
+    background-color: rgb(154, 200, 206);
+    border-radius: 1em;
+    padding: 0.5em;
     border: 1px solid black;
-    margin: 2px;
+    margin: 0.3em;
 }
 
 
@@ -172,7 +173,7 @@ section {
 
 /* all images should have the same styling in the aside */
 aside {
-    background-color: lightgray;
+    background-color: rgb(129, 158, 155);
 }
 
 aside > h2 {
@@ -186,7 +187,7 @@ aside > ol { /* i still nedd to do the class name */
   overflow-y: auto;    /* enables scrolling INSIDE the aside */
   
   max-height: 50vh;
-  background-color: rgb(112, 112, 112);
+  background-color: rgb(171, 210, 206);
 
   margin-top: 0;
   margin-bottom: 0;
