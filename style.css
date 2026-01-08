@@ -1,0 +1,313 @@
+/* core styling's */
+:root {
+    margin: auto;
+    padding: auto;
+
+    /* my var's */
+    --padding : 1em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    margin: 1em;
+}
+
+table > caption {
+    padding: var(--padding);
+    font-size: larger;
+}
+
+
+body {
+    background-image: url("images/background/backgraoundReapeat.jpeg");
+    background-repeat: repeat;
+}
+
+
+
+
+/*for the nav bar*/
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    background-color: rgb(108, 92, 188);
+
+    padding: var(--padding);
+
+    z-index: 2; /* ensures it stays above other content */
+}
+
+nav a {
+    color: white;
+    font-weight: bold;
+}
+
+nav li:hover {
+    background-color: rgb(116, 103, 169);
+}
+ 
+nav ul, nav li {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+nav > ul >li {
+    background-color: rgb(68, 56, 128);
+}
+
+nav > ul > li:last-child {
+    float: right;
+    margin-right: 3em;
+}
+
+nav > ul > li {
+  float: left;
+}
+
+nav > ul > li > a {
+  display: block;
+  text-align: center;
+  padding: 1.5em 2em;
+  text-decoration: none;
+}
+
+
+/* for the vertical dropdown menu */
+
+nav > ul > li > ul {
+  background-color: #07333b;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+
+nav > ul > li:hover > ul {
+    display: block;
+
+}
+
+nav > ul > li > ul > li {
+  padding: var(--padding);
+}
+
+nav > ul > li > ul > li > a {
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+/* header styling */
+header {
+    margin-top: 9em;
+    padding: var(--padding);
+
+    background-color: lightblue;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header img {
+    border-radius: 10%;
+    max-width: 30vw;
+}
+
+
+
+
+main {
+    background-color: rgb(86, 209, 234);
+}
+
+
+section {
+    padding: var(--padding);
+}
+
+
+
+
+/* projects */
+#projects {
+    display: grid;
+    grid-template-columns: auto; /* each auto adds a column */
+}
+
+#projects article {
+    background-color: gray;
+    padding: 50px;
+    border: 1px solid black;
+    margin: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+/*  */
+/* Aside */
+/*  */
+
+/* all images should have the same styling in the aside */
+aside {
+    background-color: lightgray;
+}
+
+aside > h2 {
+    margin-bottom: 0;
+    padding: var(--padding);
+    text-align: center;
+}
+
+/* to get its own scrole bar */
+aside > ol { /* i still nedd to do the class name */
+  overflow-y: auto;    /* enables scrolling INSIDE the aside */
+  
+  max-height: 50vh;
+  background-color: rgb(112, 112, 112);
+
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 1em;
+
+
+}
+
+aside img {
+    max-width: 40%;
+    border-radius: 10%;
+}
+
+
+aside > ol > li { /* this is an item in the timeline */
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid black;
+    margin-bottom: 1em;
+    border-radius: 1.5em;
+    padding-left: 1em;
+}
+
+aside > ol > li > h3 {
+    text-align: center;
+}
+
+/* tags styling for the aside */
+.tags {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-bottom: 1em;
+}
+
+.tags li {
+    background-color: darkgray;
+    padding: 0.2em 0.5em;
+    border-radius: 0.5em;
+    font-size: 0.9em;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*  */
+/* footer */
+/*  */
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+
+    background-color: lightblue;
+
+}
+
+footer figure {
+    margin-left: auto;
+
+
+}
+
+footer img {
+    
+    border-radius: 50%;
+
+    width: 20vw;
+    max-width: 12em;
+}
+
+footer table, footer th, footer td{
+    text-align: center;
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* non core css */
+
+@media screen and (min-width: 800px) {
+  #mainpage {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "header header"
+      "main aside"
+      "footer footer";
+    min-height: 100vh;
+  }
+
+  #mainpage > aside > ol {
+    max-height: 100vh;
+  }
+
+  header { grid-area: header; }
+  main   { grid-area: main; }
+  aside  { grid-area: aside; }
+  footer { grid-area: footer; }
+}

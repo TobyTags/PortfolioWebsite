@@ -1,0 +1,203 @@
+
+<!-- I'm making the website such that more content can easily be added to in the future. This is to be my portfolio site so I must be able to add more content with minimul effort -->
+
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <!-- KeyWords for SEO / Browser -->
+        <title>Portfolio site on Toby Tangney</title>
+        <meta name="author" content="Toby Tangney">
+
+        <!-- linking to the core css -->
+        <link rel="stylesheet" href="style.css">
+
+        <!-- more set up -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body id="mainpage">
+
+        <header>
+            <nav> <!-- main navigation bar-->
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                        <ul>
+                            <li><a href="#projects">Projects</a></li> <!-- same page -->
+                            <li><a href="pages/awardsAndFuture.html">Awards</a></li>  <!-- diffferent page A -->
+                            <li><a href="pages/awardsAndFuture.html">Future Plans</a></li> <!-- diffferent page A -->
+                            <li><a href="pages/attributes.html">Attributes</a></li> <!-- diffferent page B -->
+                        </ul>
+                    </li>
+                    <li><a href="pages/contact.html">Contact</a></li> <!-- diffferent page C -->
+                </ul>
+            </nav>
+
+            <h1>Hey, I'm Toby Tangney! I like tech and business stuff.</h1>
+
+            <img src="images/headshots/HeadShot.JPG" alt="A headshot of Toby Tangney.">
+        </header>
+
+        <main>
+            <section>
+                <h2>About Me</h2>
+                <p>I am a softwear developer and entreprenuer from Ireland. I have a passion for creating software that solves real world problems. I have worked on a variety of projects, from robotics to data collection software. I am always looking for new challenges and opportunities to learn and grow.</p>
+
+                <table>
+                    <caption><i># DataType -> Dictionary</i></caption>
+                    <tr>
+                        <th scope="col">Key</th>
+                        <th scope="col">Value</th>
+                    </tr>
+                    <tr>
+                        <td>Builder</td>
+                        <td>I like building real things — apps, systems, and good team work</td>
+                    </tr>
+                    <tr>
+                        <td>Hobbies</td>
+                        <td>I enjoy basketball, gym, and tennis. Also decent music and having the <em>craic</em> is a requirment</td>
+                    </tr>
+                    <tr>
+                        <td>Programming</td>
+                        <td>"Building out LLM weilding applications is all the rage", 2025-12-16</td>
+                    </tr>
+                    
+                </table>
+
+            </section>
+            <section id="projects"> <!-- boxes for main projects. when you click into the box I would like there to be a new page pop up 'radio button mabye?'-->
+                <h2>Projects</h2>
+                    <!-- the first container of a project -->
+                    <article>
+                        <details>
+                            <summary>
+                                <h2>Robotics</h2>
+                            </summary>
+                            <!-- maybe have radio button here of some sort to show it-->
+                            <p>I love robotics because...</p>
+                        </details>
+                    </article>
+
+                    <article>
+                        <details>
+                            <summary>
+                                <h2>IceOut</h2>
+                            </summary>
+                            <p>IceOut is a project that…</p>
+                        </details>
+                    </article>
+
+                    <article>
+                        <details>
+                            <summary>
+                                <h2>CanSat</h2>
+                            </summary>
+                        
+                            <p>Here are some more details</p>
+                        </details>
+                    </article>
+
+                    <article>
+                        <details>
+                            <summary>
+                                <h2>Vexra</h2>
+                            </summary>
+                        
+                            <p>Here are some more details</p>
+                        </details>
+                    </article>
+                    
+                    <article>
+                        <details>
+                            <summary>
+                                <h2>DataSwarm</h2>
+                            </summary>
+
+                            <p>Here are some more details</p>
+                        </details>
+                    </article>
+            </section>
+        </main>
+
+        <!-- here I want to have a timeline of everything I have done / doing. messy because all categories will go together but this is okay for me  -->
+        <aside>
+            <h2>Timeline</h2>
+
+            <ol>
+                <li>
+                    <h3>Google Hackathon</h3>
+                    <time datetime="2025-10">October 2025</time>
+                    <p>Accepted to a 3 day expenses paid for hackathon. The food was <i>exquisite</i>!</p>
+                    <a href="#">Read more</a>
+                    <figure>
+                        <img src="images/googleHack/tobyAtGoogleDoclands.png" alt="Toby standing in front of google sign">
+                        <figcaption>Me at the Dublin google HQ</figcaption>
+                    </figure>
+                    <ul class="tags">
+                        <li data-tag="Hackathon">Hackathon</li>
+                        <li data-tag="Programming">Programming</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h3>Quercus Scholar.</h3>
+                    <time datetime="2025-09">2025 - Present</time>
+                    <p>Recived a Quercus Innovation / Entrepreneurship scholarship for varous endevers into the world of entreprenourship and STEM</p>
+                    <a href="#">Read more</a>
+                    <figure>
+                        <img src="images/Quercus/plaque.png" alt="Quercus plaque for toby tangney entreprenourship scholar">
+                        <figcaption>Quercus plaque given back to my school</figcaption>
+                    </figure>
+                    <ul class="tags">
+                        <li data-tag="college">College</li>
+                    </ul>
+                </li>
+      
+                <li>
+                    <h3>VEX Robotics</h3>
+                    <time datetime="2019-09">2019 - 2023</time>
+                    <p>Spent an exstensive amoutn of time doing VEX Roboitics</p>
+                    <a href="#">Read more</a>
+                    <figure>
+                        <img src="images/VEX/roboGlasses.png" alt="My robot some place">
+                        <figcaption>This was taken at Worlds in Dallas Tx</figcaption>
+                    </figure>
+                    <ul class="tags">
+                        <li data-tag="Programming">Programming</li>
+                        <li data-tag="Hardware">Hardware</li>
+                    </ul>
+                </li>
+
+            </ol>
+        </aside>
+
+        <footer>
+
+            <div>
+                <p>© Toby Tangney</p>
+            </div>
+                
+            <table>
+                <caption>Feel free to snoop through the below</caption> <!-- I put icons in a table becuase without the it there was a black dot apearing for no apparent reason -->
+                <tr>
+                    <td>
+                        <a href="https://github.com/TobyTags" aria-label="GitHub Link">
+                            <img src="images/Icons/gitHubIcon.png" alt="GitHub icon">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="https://www.linkedin.com/in/toby-tangney-9b732227a/" aria-label="LinkedIn link">
+                            <img src="images/Icons/linkedin-icon-logo-png_seeklogo-249364.png" alt="LinkedIn icon">
+                            </a>
+                    </td>
+                </tr>
+            </table>
+
+            <figure>
+                <img src="images/headshots/atBoolCreative.png" alt="A headshot of Toby Tangney.">
+                <figcaption>Its me, Toby</figcaption>
+            </figure>
+
+        </footer>
+    </body>
+</html>
